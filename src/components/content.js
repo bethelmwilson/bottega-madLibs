@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class Content extends Component {
     reder() {
         const data = this.props.data;
+        console.log(this.props);
         return (
             <p>
                 Ladies and gentlemen, this is <b>{data.color}</b> Barber, your sportscaster, 
