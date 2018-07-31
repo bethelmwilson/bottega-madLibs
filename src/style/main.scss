@@ -1,3 +1,14 @@
+@mixin button {
+    height: 50px;
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    text-align: center;
+}
+
 .home {
     position: relative;
     display: grid;
@@ -81,6 +92,25 @@
         justify-items: center;
         align-items: center;
     }
+    
+    button:focus {
+        outline: none;
+    }
+    
+    button {
+        justify-self: center;
+    }
+    
+    &__generate {
+        background-color: #C70039;
+        @include button;
+    }
+    
+    &__clear {
+        background-color: #F6DD00;
+        @include button;
+    }
+    
 }
 
 .input {
@@ -108,6 +138,7 @@
 
         border: none;
         font-size: 15px;
+        font-weight: 700;
         text-align: center;
         padding: 4px 0;
         border-bottom: 1px solid #B3B3B3;
@@ -116,7 +147,7 @@
 
         &:focus {
             outline: none;
-            border-bottom: 1px solid rgb(0, 255, 247);
+            border-bottom: 1px solid rgb(255, 0, 76);
    
         }
         // width: 190px;
@@ -124,6 +155,7 @@
     }
     &__number {
         grid-column: number-s/number-e;
+        background-color: #C70039;
         color: white;
         font-size: 20px;
         line-height: 24px;
